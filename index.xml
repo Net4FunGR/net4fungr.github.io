@@ -3,8 +3,8 @@
         <title>Becos :: Blogs</title>
         <link>https://net4fungr.github.io/</link>
         <description>Becos76 Blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>mkaliotis@gmail.com (becos)</managingEditor>
-            <webMaster>mkaliotis@gmail.com (becos)</webMaster>
+        <generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>net4fungr(at)gmail(dot)com (becos)</managingEditor>
+            <webMaster>net4fungr(at)gmail(dot)com (becos)</webMaster>
             <atom:link href="https://net4fungr.github.io/index.xml" rel="self" type="application/rss+xml" />
         </channel>
 </rss>
