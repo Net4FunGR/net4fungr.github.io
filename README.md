@@ -1,2 +1,2 @@
-# net4fungr.github.io
+# hugo-blog
 Yet Another Blog Site
