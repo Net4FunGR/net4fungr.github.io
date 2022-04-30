@@ -1,6 +1,7 @@
 # Declarative vs. Imperative
 
 
+
 Imagine a beautiful sunny morning you walk into a dinner to have some brunch.
 You take a seat on a free table and the waitress comes over to take your order while filling a glass of water for you.
 <br><br>
@@ -13,7 +14,7 @@ You take a seat on a free table and the waitress comes over to take your order w
 => Coming right up!
 <br><br>
 The waitress takes down your order in a peace of paper, goes over to the kitchen service area and hands in the paper to the chef.
-The cook reads the order and starts shouting to his newbie cooks:
+The chef reads the order and starts shouting to his newbie cooks:
 <br><br>
 -> *Miguel*,
 - Heat a pan with four bacon strips in it
@@ -35,7 +36,7 @@ Well I guess by now you would have noticed the difference of what declarative ve
 
 Your order is the **declarative** way of doing things. You just describe what you want to be done, the end result.
 
-On the othe hand, what the chef is doing, could be though of as the **imperative** way. He is giving commands, instuctions on how to do individual things and tasks in order to achieve the end result.
+On the other hand, what the chef is doing, could be though of as the **imperative** way. He is giving commands, instructions on how to do individual things and tasks in order to achieve the end result.
 
 
 Now, if we want to take it one step further, let's say Karla and Miguel are, by now, much more experienced and the chef does not have to explicitly tell them how to prepare every step of the recipe. In plain, they can **automate** the tasks and the chef has just to say: eggs - bacon - bread - orange juice, and that's it. It all happens faster. So, the chef is able to **orchesrtate** the automated tasks that the cooks can perform to produce the result.
@@ -43,6 +44,9 @@ Now, if we want to take it one step further, let's say Karla and Miguel are, by 
 Now, let's go back to the top and say that you just order the _sunny sunday morning_ from the menu, i.e. the **service catalog**, won't the whole process be faster and more clear? Yes, as long as the waitress tells the chef and he does not forget to instruct Karla not to put ice in the orange juice :smile:
 
 Now I am getting hungry...
+
+<p align="center"><img src="sunny.jpeg" alt="Egg" width="50%" height="50%" /></p>
+
 
 
 
