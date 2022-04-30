@@ -4,7 +4,7 @@ theme = "LoveIt"
 #themesDir = "../.."
 title = "Becos :: Back Blog"
 enableRobotsTXT = true
-enableGitInfo = true
+enableGitInfo = false
 enableEmoji = true
 
 [languages]
@@ -295,7 +295,7 @@ enableEmoji = true
     paginate = 20
     # date format (month and day)
     # 日期格式 (月和日)
-    dateFormat = "01-02"
+    dateFormat = "02-01"
     # amount of RSS pages
     # RSS 文章数目
     rss = 10
@@ -611,10 +611,10 @@ enableEmoji = true
   [params.compatibility]
     # whether to use Polyfill.io to be compatible with older browsers
     # 是否使用 Polyfill.io 来兼容旧式浏览器
-    polyfill = false
+    polyfill = true
     # whether to use object-fit-images to be compatible with older browsers
     # 是否使用 object-fit-images 来兼容旧式浏览器
-    objectFit = false
+    objectFit = true
 
 # Markup related configuration in Hugo
 # Hugo 解析文档的配置
