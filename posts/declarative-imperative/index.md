@@ -45,7 +45,7 @@ Now, let's go back to the top and say that you just order the _sunny sunday morn
 
 Now I am getting hungry...
 
-<p align="center"><img src="sunny.jpeg" alt="Egg" width="50%" height="50%" /></p>
+
 
 
 
