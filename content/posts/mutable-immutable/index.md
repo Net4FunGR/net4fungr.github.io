@@ -8,8 +8,11 @@ tags: [automation]
 categories: [humour]
 toc:
   enable: false
-featuredImage: "mute.png"
-featuredImagePreview: false
+resources:
+- name: "featured-image"
+  src: "featured-image.png"
+- name: "featured-image-preview"
+  src: "featured-image-preview.png"
 author: false
 summary: "Let's get things straight..."
 ---
@@ -24,7 +27,7 @@ But, what happens if you have only ordered and consumed a single glass of wine? 
 
 You enjoyed your wine, it fulfilled its purpose, but if you want it to serve it's purpose again, it has to be replaced with a new one or a new drink :smile:
 
-<p align="center"><img src="mutable.png" alt="Egg" width="20%" height="20%" /></p>
+
 
 
 

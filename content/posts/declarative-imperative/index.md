@@ -8,8 +8,11 @@ tags: [automation]
 categories: [humour]
 toc:
   enable: false
-featuredImage: "morpheus.jpg"
-featuredImagePreview: false
+resources:
+- name: "featured-image"
+  src: "featured-image.jpg"
+- name: "featured-image-preview"
+  src: "featured-image-preview.jpeg"
 author: false
 authorLink: ""
 summary: "Unravel the mystery"
@@ -59,7 +62,7 @@ Now, let's go back to the top and say that you just order the _sunny sunday morn
 
 Now I am getting hungry...
 
-<p align="center"><img src="sunny.jpeg" alt="Egg" width="50%" height="50%" /></p>
+
 
 
 

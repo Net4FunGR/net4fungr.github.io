@@ -6,8 +6,11 @@ tags: [bad-jokes]
 categories: [humour]
 toc:
   enable: false
-featuredImage: "tfaci.png"
-featuredImagePreview: false
+resources:
+- name: "featured-image"
+  src: "featured-image.png"
+- name: "featured-image-preview"
+  src: "featured-image.png"
 author: false
 summary: "You must be greek to get this joke"
 ---
