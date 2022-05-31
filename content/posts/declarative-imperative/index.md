@@ -11,12 +11,16 @@ toc:
 resources:
 - name: "featured-image"
   src: "featured-image.jpg"
+  params:
+    width: "200px"
+    height: "200px"
 - name: "featured-image-preview"
   src: "featured-image-preview.jpeg"
 author: false
 authorLink: ""
 summary: "Unravel the mystery"
 ---
+
 
 
 Imagine a beautiful sunny morning you walk into a dinner to have some brunch.

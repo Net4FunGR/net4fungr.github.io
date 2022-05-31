@@ -107,15 +107,24 @@ $pagination-link-hover-color-dark: #fff !default;
 
 // ========== Code ========== //
 // Color of the code
-$code-color: #E74C3C !default;
+//$code-color: #E74C3C !default;
+//$code-color-dark: #E5BF78 !default;
+$code-color: #ffffff !default;
 $code-color-dark: #E5BF78 !default;
 
+
 // Color of the code background
-$code-background-color: #f5f5f5 !default;
+//$code-background-color: #f5f5f5 !default;
+//$code-background-color-dark: #272C34 !default;
+
+$code-background-color: #272C34 !default;
 $code-background-color-dark: #272C34 !default;
+
 
 $code-info-color: #9c9c9c !default;
 $code-info-color-dark: #b1b0b0 !default;
+
+
 
 // Font size of the code
 $code-font-size: .875rem !default;
