@@ -65,6 +65,7 @@ enableEmoji = true
         post = "</b>"
         name = "About"
         url = "https://becos76.github.io"
+        #url = "/about/"
         title = "Access my Online CV"
         weight = 5
       [[languages.en.menu.main]]
@@ -98,7 +99,7 @@ enableEmoji = true
       [languages.en.params.search]
         enable = true
         # type of search engine ("lunr", "algolia")
-        type = "lunr"
+        type = "algolia"
         # max index length of the chunked content
         contentLength = 4000
         # placeholder of the search bar
@@ -112,9 +113,9 @@ enableEmoji = true
         # whether to use the absolute URL based on the baseURL in search index
         absoluteURL = false
         [languages.en.params.search.algolia]
-          index = "index.en"
-          appID = "PASDMWALPK"
-          searchKey = "b42948e51daaa93df92381c8e2ac0f93"
+          index = "net4fungr"
+          appID = "1664BKGA6K"
+          searchKey = "04dc85c51206789c155c5878b08f3cea"
       # Home page config
       [languages.en.params.home]
         # amount of RSS pages
@@ -234,7 +235,7 @@ enableEmoji = true
     [params.header.title]
       # URL of the LOGO
       # LOGO 的 URL
-      logo = "images/pyrtr.png"
+      logo = "/images/pyrtr.png"
       # title name
       # 标题名称
       name = "...ssh and blog..."
@@ -547,7 +548,7 @@ enableEmoji = true
   # Site verification code for Google/Bing/Yandex/Pinterest/Baidu
   # 网站验证代码，用于 Google/Bing/Yandex/Pinterest/Baidu
   [params.verification]
-    google = ""
+    google = "m_enMQYWx1a1cSKPfRT_00wHfqT8ir4PZSBPyeaIH-o"
     bing = ""
     yandex = ""
     pinterest = ""
@@ -669,7 +670,7 @@ enableEmoji = true
 # Permalinks config (https://gohugo.io/content-management/urls/#permalinks)
 # Permalinks 配置 (https://gohugo.io/content-management/urls/#permalinks)
 [Permalinks]
-  # posts = ":year/:month/:filename"
+  #posts = "posts/:year/:month/:filename"
   posts = "posts/:filename"
 
 # Privacy config (https://gohugo.io/about/hugo-and-gdpr/)

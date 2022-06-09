@@ -2,7 +2,7 @@
 title: "Kube my router up! - Part One"
 subtitle: "Deploy cloud image in EVE-NG and prepare VMs"
 date: 2022-05-28T10:36:24+03:00
-lastmod: 2022-06-01T00:00:00+03:00
+lastmod: 2022-06-09T00:00:00+03:00
 draft: false
 tags: [EVE-NG, Ubuntu]
 categories: [k8s]
@@ -21,14 +21,13 @@ code:
 ---
 ## Intro
 ___
-While I was ramping up my skills in k8s, I bumped into google's Kubernetes based Network Emulation ([KNE](https://github.com/google/kne)), and since I've been a fool for network emulation software over the last twenty years, I knew I had to give it a go and see where it can get me.  I first heard of KNE during episode #015 of this [podcast](https://anchor.fm/netauto-hangout) and it seemed very promising to me since it is a way to spin up network topologies from devices running in containers.
+While I was ramping up my skills in k8s, I bumped into google's Kubernetes based Network Emulation ([KNE](https://github.com/google/kne)), and since I've been a fool for network emulation software over the last twenty years, I knew I had to give it a go and see where it can get me.  I first heard of KNE during episode #015 of this [podcast](https://anchor.fm/netauto-hangout) and it seemed very promising to me since it is a way to spin up network topologies from devices running in containers orchestrated by a kubernetes cluster that, guess what, can span more than one host.
 
 So, in these series of posts I will try to document my experiences setting it up and having fun with it :smile: since up to now there is too little documentation around it and also I think this [blog post](https://blog.itsalwaysthe.network/posts/kubernetes-based-network-emulation/) was the first to cover a basic orientation but still it covers running it inside a kind k8s node, i.e. in a container, where as my intent was to have the k8s spanning more than one machine since network devices are expensive in resources and my home lab is limited to 2x32GB EVE-NG servers.
 
 - [Part One - Setting up the k8s VMs in EVE-NG](/posts/kube-my-router-pt1/)
 - [Part Two - Deploying the k8s cluster with kubeadm](/posts/kube-my-router-pt2/)
-- Last Part - Installing and testing KNE
-<!-- - [Last Part - Installing and testing KNE](posts/kube-my-router-pt3/) -->
+- [Last Part - Installing and testing KNE](/posts/kube-my-router-pt3/)
 ---
 
 ## Part One - Setting up the VMs
@@ -36,7 +35,7 @@ So, in these series of posts I will try to document my experiences setting it up
 ### The Intent
   - EVE-NG for hosting linux VMs
   - Ubuntu 20.04 cloud image as base
-  - 2xEVE-NG servers - 3 VMs in total
+  - 2xEVE-NG servers, 2.0.3-112 community edition - 3 VMs in total
   - Deployment of 3xLinux VMs for our k8s cluster
 ___
 
@@ -65,20 +64,23 @@ drwxr-xr-x 16 root root      4096 May 29 21:19 ../
 
 root@eve-01# curl -ks https://cloud-images.ubuntu.com/focal/current/MD5SUMS  | md5sum -c --ignore-missing
 focal-server-cloudimg-amd64.img: OK
-root@eve-01#
 ```
 Copy the image to the appropriate **linux-** directory of EVE-NG in so that is categorised as a linux image. You can resize the image to your linking as well.
 
 ```bash
 root@eve-01# mkdir -p /opt/unetlab/addons/qemu/linux-focal-server-cloudimg/
+
 root@eve-01# cp focal-server-cloudimg-amd64.img !$hda.qcow2
 cp focal-server-cloudimg-amd64.img /opt/unetlab/addons/qemu/linux-focal-server-cloudimg/hda.qcow2
+
 root@eve-01# cd /opt/unetlab/addons/qemu/linux-focal-server-cloudimg/
+
 root@eve-01# ll
 total 581384
 drwxr-xr-x  2 root root      4096 May 29 21:46 ./
 drwxr-xr-x 12 root root      4096 May 29 21:45 ../
 -rw-r--r--  1 root root 595329024 May 29 21:46 hda.qcow2
+
 root@eve-01# qemu-img info hda.qcow2
 image: hda.qcow2
 file format: qcow2
@@ -88,6 +90,7 @@ cluster_size: 65536
 Format specific information:
     compat: 0.10
     refcount bits: 16
+
 root@eve-01# qemu-img resize hda.qcow2 50G
 Image resized.
 root@eve-01# qemu-img info hda.qcow2
@@ -99,20 +102,20 @@ cluster_size: 65536
 Format specific information:
     compat: 0.10
     refcount bits: 16
-root@eve-01# 
 ```
 
 ___
 ### Install cloud-image utilities and prepare the seed file
 ___
 
-Install the required package
+Install the required package.
 ```bash
 root@eve-01# cd /opt/cloud/
+
 root@eve-01# apt install cloud-image-utils
 < ...omitted...>
 ```
-Prepare the seed file and copy it to the base image location
+Prepare the seed file and copy it to the base image location.
 ```bash
 root@eve-01# cat <<EOF > cloud-config
 #cloud-config
@@ -128,6 +131,7 @@ ssh_pwauth: True
 EOF
 
 root@eve-01# cloud-localds seed cloud-config
+
 root@eve-01# qemu-img info seed
 image: seed
 file format: raw
@@ -141,10 +145,11 @@ Make sure you include the comment #cloud-config in the seed file
 ___
 ### Build the VM topology in EVE-NG
 ___
-Once both boot disk and seed cdrom files are in place, copy them onto the other node and run the **fixpermissions** script
+Once both boot disk and seed cdrom files are in place, copy them onto the other node and run the **fixpermissions** script.
 
 ```Bash
 root@eve-01# cd /opt/unetlab/addons/qemu/linux-focal-server-cloudimg/
+
 root@eve-01# ll
 total 581760
 drwxr-xr-x  2 root root      4096 May 29 22:02 ./
@@ -155,7 +160,9 @@ drwxr-xr-x 12 root root      4096 May 29 21:45 ../
 root@eve-01# /opt/unetlab/wrappers/unl_wrapper -a fixpermissions
 
 root@eve-01# ssh eve-02 "mkdir -p /opt/unetlab/addons/qemu/linux-focal-server-cloudimg"
+
 root@eve-01# scp hda.qcow2 eve-02:/opt/unetlab/addons/qemu/linux-focal-server-cloudimg/
+
 root@eve-01# scp cdrom.iso 192.168.1.22:/opt/unetlab/addons/qemu/linux-focal-server-cloudimg/
 
 root@eve-01# ssh eve-02 "/opt/unetlab/wrappers/unl_wrapper -a fixpermissions"
@@ -176,9 +183,9 @@ Here is how it looks like from GUI perspective:
 You can also download the lab exports for [eve-01](eve-01.zip) and [eve-02](eve-02.zip)
 
 {{< admonition type=danger title="Heads Up" open=true >}}
-Due to the fact that EVE-NG allocates MAC addresses sequentially from a pool which is per-server and per-POD and I am using the same LAB POD on both servers, **kates-control** and **kates-node-02** (i.e. the first VMs on each node, since only EVE-01 has two nodes) will end up having the same MAC address. In order to avoid this, we can either use _dummy_ VMs, i.e. powered off VMs or we can specify the value for the first MAC address on the **kates-node-02** VM to cause EVE-NG to allocate a different MAC to the NIC, or simply we can use different EVE-NG PODs across the two servers to create the lab :smile:.
+Due to the fact that EVE-NG allocates MAC addresses sequentially from a pool which is allocated per-POD and if you are using the same LAB POD on both servers, **kates-control** and **kates-node-02** (i.e. the first VMs on each node, since only EVE-01 has two nodes) will end up having the same MAC address. In order to avoid this, we can either use _dummy_ VMs, i.e. powered off VMs or we can specify the value for the first MAC address on the **kates-node-02** VM to cause EVE-NG to allocate a different MAC to the NIC, or simply we can use different EVE-NG PODs across the two servers to create the lab :smile:. I went for the latter and simpler method.
 {{< image src="kates2.png" caption="Change MAC address of VM on second EVE server" src_s="kates2.png" src_l="kates2.png" width="400" >}}
-Have this also in mind for all your other labs and topologies. The MAC allocation is per device type.
+Have this also in mind for all your other labs and topologies. The MAC allocation is per lab POD.
 {{< /admonition >}}
 
 ___
@@ -188,11 +195,12 @@ ___
 
 
 All VMs are ready to start.  Once all nodes are booted you can access them from the VNC or HTML5 console and perform the initial configuration, which includes:
+- Disabling cloud-init
 - Setting the hostname
 - Configuring network addresses
 - Updating and Upgrading
 
-But, let's first check that all VMs are different and also the MAC addresses are not the same
+But, let's first check that all VMs are different and also the MAC addresses are not the same. The outputs shown are when using the same LAB POD in EVE-NG.
 
 ```bash {hl_lines=[8]}
 # On kates-control
@@ -240,12 +248,14 @@ So from the VM console:
 
 ```bash 
 ubuntu@ubuntu:~$ sudo touch /etc/cloud/cloud-init.disabled
-ubuntu@ubuntu:~$ sudo hostnamectl set-hostname kates-cloud
+
+ubuntu@ubuntu:~$ sudo hostnamectl set-hostname kates-control
 ```
 Adjust the netplan file according to your environment and apply the configuration. I prefer to remove the static MAC assignment to the NIC
 
 {{< highlight bash >}}
 ubuntu@ubuntu:~$ sudo vi /etc/netplan/50-cloud-init.yaml
+
 ubuntu@ubuntu:~$ cat /etc/netplan/50-cloud-init.yaml
 network:
     ethernets:
@@ -264,7 +274,7 @@ Now that the basic config has been done for all 3 nodes, we can reboot and login
 
 
 
-``` bash {label="Hugo is cool"}
+```bash 
 ubuntu@kates-*:~$ sudo apt update \
                   && sudo apt -y full-upgrade \
                   && [ -f /var/run/reboot-required ] \
@@ -279,4 +289,7 @@ ___
 ___
 ## [Part Two - Deploying the k8s cluster with kubeadm](/posts/kube-my-router-pt2/)
 ___
-<!--  ## [Last Part - Installing and testing KNE](posts/kube-my-router-pt3/) -->
+## [Last Part - Installing and testing KNE](/posts/kube-my-router-pt3/)
+___
+## [Outro](/posts/kube-my-router-pt3/#outro)
+___
