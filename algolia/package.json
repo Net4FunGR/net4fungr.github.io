@@ -2,7 +2,7 @@
   "dependencies": {
     "atomic-algolia": "^0.3.19"
   },
-  "scripts:" {
-    "algolia": "atomic-algolia"
+  "scripts": {
+    "upload-data": "node data-upload.js"
   }
 }

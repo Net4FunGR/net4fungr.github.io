@@ -32,12 +32,10 @@ jobs:
       - name: Upload Data
         working-directory: ./algolia
         run: |
-          npm install atomic-algolia --save
+          npm install 
           ALGOLIA_APP_ID=1664BKGA6K \
           ALGOLIA_ADMIN_KEY={{ secrets.ALGOLIA_ADMIN_API_KEY }} \
-          ALGOLIA_INDEX_NAME=net4fungr \
-          ALGOLIA_INDEX_FILE=../public/index.json \
-          npm run algolia
+          node upload-data.js
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
