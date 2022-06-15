@@ -32,7 +32,7 @@ jobs:
       - name: Upload Data
         working-directory: ./algolia
         run: |
-          npm install
+          npm install atomic-algolia
           ALGOLIA_APP_ID=1664BKGA6K \
           ALGOLIA_ADMIN_KEY={{ secrets.ALGOLIA_ADMIN_API_KEY }} \
           ALGOLIA_INDEX_NAME=net4fungr \
