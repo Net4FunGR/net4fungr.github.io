@@ -28,6 +28,16 @@ jobs:
 
       - name: Build
         run: hugo --minify
+      
+      - name: Upload Data
+        working-directory: ./algolia
+        run: |
+          npm install
+          ALGOLIA_APP_ID=1664BKGA6K \
+          ALGOLIA_ADMIN_KEY={{ secrets.ALGOLIA_ADMIN_API_KEY }} \
+          ALGOLIA_INDEX_NAME=net4fungr \
+          ALGOLIA_INDEX_FILE=../public/index.json \
+          npm run algolia
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
@@ -35,13 +45,3 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
-      
-      - name: Upload Data
-        working-directory: .
-        run: |
-          npm install
-          npm run data-upload -- -c \
-          -f public/index.json \
-          -a 1664BKGA6K \
-          -k ${{ secrets.ALGOLIA_ADMIN_API_KEY }} \
-          -n net4fungr
