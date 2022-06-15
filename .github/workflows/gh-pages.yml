@@ -22,7 +22,7 @@ jobs:
           extended: true
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v2
         with:
           node-version: '14'
 
@@ -32,7 +32,6 @@ jobs:
       - name: Upload Data
         working-directory: ./algolia
         run: |
-          npm install atomic-algolia
           ALGOLIA_APP_ID=1664BKGA6K ALGOLIA_ADMIN_KEY=${{ secrets.ALGOLIA_ADMIN_API_KEY }} node data-upload.js
 
       - name: Deploy
