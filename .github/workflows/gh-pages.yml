@@ -37,11 +37,11 @@ jobs:
           publish_dir: ./public
       
       - name: Upload Data
-        working-directory: ./algolia
+        working-directory: .
         run: |
           npm install
           npm run data-upload -- -c \
-          -f ../public/index.json \
+          -f public/index.json \
           -a 1664BKGA6K \
           -k ${{ secrets.ALGOLIA_ADMIN_API_KEY }} \
           -n net4fungr
