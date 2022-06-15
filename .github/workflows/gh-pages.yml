@@ -32,6 +32,7 @@ jobs:
       - name: Upload Data
         working-directory: ./algolia
         run: |
+          npm install
           ALGOLIA_APP_ID=1664BKGA6K ALGOLIA_ADMIN_KEY=${{ secrets.ALGOLIA_ADMIN_API_KEY }} node data-upload.js
 
       - name: Deploy
