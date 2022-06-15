@@ -3,6 +3,6 @@
     "atomic-algolia": "^0.3.19"
   },
   "scripts": {
-    "upload-data": "node data-upload.js"
+    "data-upload": "node data-upload.js"
   }
 }
