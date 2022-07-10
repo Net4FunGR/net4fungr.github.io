@@ -3,7 +3,7 @@
 ___
 ## Intro
 ___
-Throughout this post, I am documenting my ansible orientation and ramping-up process towards automating the provisioning of a k8s cluster on ubuntu linux. I believe it is not something too fancy or something that has not been visited over and over again in various other posts, but this is the scrub of my exposure with ansible automation. I tried to make it modular with several playbook imports and task includes executed from a _parent_ playbook file, rather than having a single large playbook. Ansible _roles_ are not leveraged :grin:. The _code_ for this project can be found [here](https://github.com/becos76/k8s_ansible/).
+Throughout this post, I am documenting my ansible orientation and ramping-up process towards automating the provisioning of a k8s cluster on ubuntu linux. I believe it is not something too fancy or something that has not been visited over and over again in various other posts, but this is the scrub of my exposure with ansible automation. I tried to make it modular with several playbook imports and task includes executed from a _parent_ playbook file, rather than having a single long playbook. Ansible _roles_ are not leveraged :grin:. The _code_ for this project can be found [here](https://github.com/becos76/k8s_ansible/).
 ___
 ## The Intent
 ___
