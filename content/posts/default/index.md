@@ -1,18 +1,18 @@
 ---
-title: "New Blog Post"
-subtitle: "Subtitle"
-date: 2022-04-28T15:36:24+03:00
+title: "Template for New Blog Post"
+subtitle: "Copy me for a new blog post"
+date: 2021-12-31T15:36:24+03:00
 #lastmod: 2022-04-30T15:36:24+03:00
 draft: true
 tags: [automation]
-categories: [humour]
+categories: [back-blog]
 toc:
   enable: false
-resources:
-- name: "featured-image"
-  src: "featured-image.png"
-- name: "featured-image-preview"
-  src: "featured-image-preview.png"
+code:
+  copy: true
+  maxShownLines: -1
+featuredImage: "featured-image.jpg"
+featuredImagePreview: "featured-image-preview.jpg"
 author: false
 summary: "A bit of summary..."
 ---
