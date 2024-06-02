@@ -3,15 +3,15 @@
 # See: https://gohugo.io/getting-started/configuration/
 # -------------------------------------------------------------------------------------
 
-title = "Hugo FixIt Blog"
-baseURL = "https://hugo-fixit.github.io/hugo-fixit-starter/"
+title = "Becos :: Back Blog"
+baseURL = "https://net4fungr.github.io/"
 # theme = "FixIt"
 defaultContentLanguage = "en"
 languageCode = "en"
-hasCJKLanguage = true
+hasCJKLanguage = false
 enableRobotsTXT = true
 enableEmoji = true
-enableGitInfo = true
+enableGitInfo = false
 relativeURLs = false
 buildDrafts = false
 summaryLength = 150

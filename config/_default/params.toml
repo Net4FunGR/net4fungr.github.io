@@ -4,9 +4,9 @@
 # -------------------------------------------------------------------------------------
 
 # FixIt 0.2.15 | CHANGED FixIt theme version
-version = "0.2.X" # e.g. "0.2.X", "0.2.15", "v0.2.15" etc.
+version = "0.3.7" # e.g. "0.2.X", "0.2.15", "v0.2.15" etc.
 # site description
-description = "This is my new Hugo FixIt site"
+description = "Becos :: Back Blog"
 # site keywords
 keywords = ["Hugo", "FixIt"]
 # site default theme ["light", "dark", "auto"]
@@ -17,7 +17,7 @@ fingerprint = ""
 # NEW date format
 dateFormat = "2006-01-02"
 # website images for Open Graph and Twitter Cards
-images = []
+images = ["/images/pyrtr.png"]
 # FixIt 0.2.12 | NEW enable PWA
 enablePWA = false
 # FixIt 0.2.14 | NEW whether to add external Icon for external links automatically
@@ -26,27 +26,27 @@ externalIcon = false
 navigationReverse = false
 # FixIt 0.3.0 | NEW whether to add site title to the title of every page
 # remember to set up your site title in `hugo.toml` (e.g. title = "title")
-withSiteTitle = true
+withSiteTitle = false
 # FixIt 0.3.0 | NEW title delimiter when the site title is be added to the title of every page
 titleDelimiter = "-"
 # FixIt 0.3.0 | NEW whether to add site subtitle to the title of index page
 # remember to set up your site subtitle by `params.header.subtitle.name`
-indexWithSubtitle = false
+indexWithSubtitle = true
 # FixIt 0.2.14 | NEW FixIt will, by default, inject a theme meta tag in the HTML head on the home page only.
 # You can turn it off, but we would really appreciate if you don’t, as this is a good way to watch FixIt's popularity on the rise.
 disableThemeInject = false
 
 # Author Configuration
 [author]
-  name = "Lruihao"
-  email = "1024@lruihao.cn"
-  link = "https://github.com/Lruihao"
-  avatar = ""
+  name = "becos76"
+  email = "mkaliotis(at)gmail(dot)com"
+  link = "https://github.com/becos76"
+  avatar = "/images/pyrtr.png"
 
 # FixIt 0.3.0 | NEW public Git repository information only then enableGitInfo is true
 [gitInfo]
-  # e.g. "https://github.com/hugo-fixit/docs"
-  repo = ""
+  # e.g. "https://github.com/net4fungr/Net4FunGr"
+  repo = "https://github.com/net4fungr/net4fungr.github.io"
   branch = "main"
   # the content directory path relative to the root of the repository
   dir = "content"
@@ -57,7 +57,7 @@ disableThemeInject = false
 # App icon config
 [app]
   # optional site title override for the app when added to an iOS home screen or Android launcher
-  title = "Hugo FixIt Blog"
+  title = "Becos :: Back Blog"
   # whether to omit favicon resource links
   noFavicon = false
   # modern SVG favicon to use in place of older style .png and .ico files
@@ -95,7 +95,7 @@ disableThemeInject = false
   [search.fuse]
     # FixIt 0.2.17 | NEW https://fusejs.io/api/options.html
     isCaseSensitive = false
-    minMatchCharLength = 2
+    minMatchCharLength = 3
     findAllMatches = false
     location = 0
     threshold = 0.3
@@ -113,21 +113,21 @@ disableThemeInject = false
   # Header title config
   [header.title]
     # URL of the LOGO
-    logo = "/hugo-fixit-starter/images/fixit.min.svg"
+    logo = "/images/pyrtr.png"
     # title name
-    name = ""
+    name = "...ssh and blog..."
     # you can add extra information before the name (HTML format is supported), such as icons
-    pre = ""
+    pre = "<"
     # you can add extra information after the name (HTML format is supported), such as icons
-    post = ""
+    post = "/>"
     # whether to use typeit animation for title name
     typeit = false
   # FixIt 0.2.12 | NEW Header subtitle config
   [header.subtitle]
     # subtitle name
-    name = ""
+    name = "revamped!"
     # whether to use typeit animation for subtitle name
-    typeit = false
+    typeit = true
 
 # FixIt 0.2.18 | NEW Breadcrumb config
 [breadcrumb]
@@ -152,7 +152,7 @@ disableThemeInject = false
   # ICP info only in China (HTML format is supported)
   icp = ""
   # license info (HTML format is supported)
-  license = '<a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>'
+  license = '<a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
   # FixIt 0.3.0 | NEW whether to show Hugo and theme info
   [footer.powered]
     enable = true
@@ -164,7 +164,7 @@ disableThemeInject = false
     animate = true
     icon = "fa-solid fa-heartbeat"
     pre = ""
-    value = "" # e.g. "2021-12-18T16:15:22+08:00"
+    value = "2021-12-18T16:15:22+08:00" # e.g. "2021-12-18T16:15:22+08:00"
   # FixIt 0.2.17 | NEW footer lines order, optional values: ["first", 0, 1, 2, 3, 4, 5, "last"]
   [footer.order]
     powered = 0
@@ -178,22 +178,22 @@ disableThemeInject = false
   # special amount of posts in archives page
   paginate = 20
   # date format (month and day)
-  dateFormat = "01-02"
+  dateFormat = "02-01"
 
 # Section page config (all pages in section)
 [section]
   # special amount of pages in each section page
   paginate = 20
   # date format (month and day)
-  dateFormat = "01-02"
+  dateFormat = "02-01"
   # amount of RSS pages
   rss = 10
   # FixIt 0.2.13 | NEW recently updated pages config
   # TODO refactor to support archives, section, taxonomy and term
   [section.recentlyUpdated]
-    enable = false
+    enable = true
     rss = false
-    days = 30
+    days = 1
     maxCount = 10
 
 # List (category or tag) page config
@@ -201,13 +201,13 @@ disableThemeInject = false
   # special amount of posts in each list page
   paginate = 20
   # date format (month and day)
-  dateFormat = "01-02"
+  dateFormat = "02-01"
   # amount of RSS pages
   rss = 10
 
 # FixIt 0.2.17 | NEW TagCloud config for tags page
 [tagcloud]
-  enable = false
+  enable = true
   min = 14 # Minimum font size in px
   max = 32 # Maximum font size in px
   peakCount = 10 # Maximum count of posts per tag
@@ -223,19 +223,19 @@ disableThemeInject = false
     # Gravatar Email for preferred avatar in home page
     gravatarEmail = "xx@xx.com"
     # URL of avatar shown in home page
-    avatarURL = ""
+    avatarURL = "/images/pyrtr.png"
     # FixIt 0.2.17 | NEW identifier of avatar menu link
     avatarMenu = ""
     # title shown in home page (HTML format is supported)
-    title = ""
+    title = "Becos Back Blog"
     # subtitle shown in home page
-    subtitle = "This is my new Hugo FixIt site"
+    subtitle = "Welcome to a Yet Another Blog site!!! It is about documenting all the things I wanted to blog about but ... didn't have the time to."
     # whether to use typeit animation for subtitle
     typeit = true
     # whether to show social links
     social = true
     # disclaimer (HTML format is supported)
-    disclaimer = ""
+    disclaimer = "<p>Views, thoughts, and opinions expressed in this blog belong solely to the author,<br> and not necessarily to the author's employer, organization, commitee or other group or individual.</p>"
   # Home page posts
   [home.posts]
     enable = true
@@ -244,9 +244,9 @@ disableThemeInject = false
 
 # FixIt 0.2.16 | CHANGED Social config about the author
 [social]
-  GitHub = ""
-  Linkedin = ""
-  Twitter = ""
+  GitHub = "becos76"
+  Linkedin = "becos"
+  Twitter = "mkaliotis"
   Instagram = ""
   Facebook = ""
   Telegram = ""
@@ -285,7 +285,7 @@ disableThemeInject = false
   Steam = ""
   Twitch = ""
   Strava = ""
-  Skype = ""
+  Skype = "mkaliot"
   Whatsapp = ""
   Zhihu = ""
   Douban = ""
@@ -329,13 +329,13 @@ disableThemeInject = false
   Douyin = ""
   TikTok = ""
   Phone = ""
-  Email = ""
+  Email = "mkaliotis@gmail.com"
   RSS = true
 
 # Page config
 [page]
   # FixIt 0.2.18 | NEW whether to enable the author's avatar of the post
-  authorAvatar = true
+  authorAvatar = false
   # whether to hide a page from home page
   hiddenFromHomePage = false
   # whether to hide a page from search results
@@ -345,10 +345,10 @@ disableThemeInject = false
   # FixIt 0.3.0 | NEW whether to hide a page from related posts
   hiddenFromRelated = false
   # whether to enable twemoji
-  twemoji = false
+  twemoji = true
   # whether to enable lightgallery
   # FixIt 0.2.18 | CHANGED if set to "force", images in the content will be forced to shown as the gallery.
-  lightgallery = false
+  lightgallery = true
   # whether to enable the ruby extended syntax
   ruby = true
   # whether to enable the fraction extended syntax
@@ -360,11 +360,11 @@ disableThemeInject = false
   # whether to show link to Raw Markdown content of the post
   linkToMarkdown = true
   # FixIt 0.3.0 | NEW whether to show link to view source code of the post
-  linkToSource = true
+  linkToSource = false
   # FixIt 0.3.0 | NEW whether to show link to edit the post
-  linkToEdit = true
+  linkToEdit = false
   # FixIt 0.3.0 | NEW whether to show link to report issue for the post
-  linkToReport = true
+  linkToReport = false
   # whether to show the full text content in RSS
   rssFullText = false
   # FixIt 0.2.13 | NEW Page style ["narrow", "normal", "wide", ...]
@@ -381,9 +381,9 @@ disableThemeInject = false
   # FixIt 0.2.18 | NEW whether to enable instant.page
   instantPage = false
   # FixIt 0.3.0 | NEW whether to enable collection list at the sidebar
-  collectionList = false
+  collectionList = true
   # FixIt 0.3.0 | NEW whether to enable collection navigation at the end of the post
-  collectionNavigation = false
+  collectionNavigation = true
 
   # FixIt 0.2.15 | NEW Repost config
   [page.repost]
@@ -396,7 +396,7 @@ disableThemeInject = false
     # whether to keep the static table of the contents in front of the post
     keepStatic = false
     # whether to make the table of the contents in the sidebar automatically collapsed
-    auto = true
+    auto = false
     # FixIt 0.2.13 | NEW position of TOC ["left", "right"]
     position = "right"
   # FixIt 0.2.13 | NEW Display a message at the beginning of an article to warn the reader that its content might be expired
@@ -439,9 +439,9 @@ disableThemeInject = false
     # whether to show the copy button of the code block
     copy = true
     # FixIt 0.2.13 | NEW whether to show the edit button of the code block
-    edit = true
+    edit = false
     # the maximum number of lines of displayed code by default
-    maxShownLines = 10
+    maxShownLines = 15
   # Mapbox GL JS config (https://docs.mapbox.com/mapbox-gl-js)
   [page.mapbox]
     # access token of Mapbox GL JS
@@ -537,9 +537,9 @@ disableThemeInject = false
       versionCheck = true
     # Disqus comment config (https://disqus.com)
     [page.comment.disqus]
-      enable = false
+      enable = true
       # Disqus shortname to use Disqus in posts
-      shortname = ""
+      shortname = "becos76"
     # Gitalk comment config (https://github.com/gitalk/gitalk)
     [page.comment.gitalk]
       enable = false
@@ -669,7 +669,7 @@ disableThemeInject = false
 # TypeIt config
 [typeit]
   # typing speed between each step (measured in milliseconds)
-  speed = 100
+  speed = 50
   # blinking speed of the cursor (measured in milliseconds)
   cursorSpeed = 1000
   # character used for the cursor (HTML format is supported)
@@ -695,17 +695,17 @@ disableThemeInject = false
 [watermark]
   enable = false
   # watermark's text (HTML format is supported)
-  content = ""
+  content = "<img src='/images/pyrtr.png'>"
   # watermark's transparency
   opacity = 0.1
   # watermark's width. unit: px
-  width = 150
+  width = 700
   # watermark's height. unit: px
-  height = 20
+  height = 700
   # row spacing of watermarks. unit: px
-  rowSpacing = 60
+  rowSpacing = 0
   # col spacing of watermarks. unit: px
-  colSpacing = 30
+  colSpacing = 0
   # watermark's tangent angle. unit: deg
   rotate = 15
   # watermark's fontSize. unit: rem
@@ -721,7 +721,7 @@ disableThemeInject = false
 
 # Site verification code config for Google/Bing/Yandex/Pinterest/Baidu/360/Sogou
 [verification]
-  google = ""
+  google = "m_enMQYWx1a1cSKPfRT_00wHfqT8ir4PZSBPyeaIH-o"
   bing = ""
   yandex = ""
   pinterest = ""
@@ -752,7 +752,7 @@ disableThemeInject = false
 
 # Cookie consent config
 [cookieconsent]
-  enable = true
+  enable = false
   # text strings used for Cookie consent banner
   [cookieconsent.content]
     message = ""
@@ -775,41 +775,41 @@ disableThemeInject = false
 
 # FixIt 0.2.14 | NEW GitHub banner in the top-right or top-left corner
 [githubCorner]
-  enable = false
-  permalink = "https://github.com/hugo-fixit/FixIt"
-  title = "View source on GitHub"
+  enable = true
+  permalink = "https://github.com/becos76/"
+  title = "Visit my GitHub"
   position = "right" # ["left", "right"]
 
 # FixIt 0.2.14 | NEW Gravatar config
 [gravatar]
   # FixIt 0.2.18 | NEW Depends on the author's email, if the author's email is not set, the local avatar will be used
-  enable = true
+  enable = false
   # Gravatar host, default: "www.gravatar.com"
-  host = "gravatar.loli.net" # ["cn.gravatar.com", "gravatar.loli.net", ...]
+  host = "www.gravatar.com" # ["cn.gravatar.com", "gravatar.loli.net", ...]
   style = "" # ["", "mp", "identicon", "monsterid", "wavatar", "retro", "blank", "robohash"]
 
 # FixIt 0.2.16 | NEW Back to top
 [backToTop]
   enable = true
   # Scroll percent label in b2t button
-  scrollpercent = false
+  scrollpercent = true
 
 # FixIt 0.2.16 | NEW Reading progress bar
 [readingProgress]
-  enable = false
+  enable = true
   # Available values: ["left", "right"]
   start = "left"
   # Available values: ["top", "bottom"]
   position = "top"
   reversed = false
-  light = ""
-  dark = ""
+  light = "orange"
+  dark = "grey"
   height = "2px"
 
 # FixIt 0.2.17 | NEW Progress bar in the top during page loading.
 # For more information: https://github.com/CodeByZach/pace
 [pace]
-  enable = false
+  enable = true
   # All available colors:
   # ["black", "blue", "green", "orange", "pink", "purple", "red", "silver", "white", "yellow"]
   color = "blue"

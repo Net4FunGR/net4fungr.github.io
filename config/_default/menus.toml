@@ -3,6 +3,18 @@
 # See: https://fixit.lruihao.cn/documentation/basics/#menu-configuration
 # -------------------------------------------------------------------------------------
 
+
+#[[main]]
+#  identifier = "documentation"
+#  name = "Docs"
+#  url = "/categories/documentation/"
+#  title = "Theme Documentation"
+#  weight = 1
+#  [main.params]
+#    icon = "fa-regular fa-newspaper"
+
+
+
 [[main]]
   identifier = "archives"
   parent = ""
@@ -13,8 +25,8 @@
   name = "Archives"
   url = "/archives/"
   # title will be shown when you hover on this menu link
-  title = ""
-  weight = 1
+  title = "All My Posts"
+  weight = 2
   # FixIt 0.2.14 | NEW add user-defined content to menu items
   [main.params]
     # add css class to a specific menu item
@@ -25,6 +37,8 @@
     icon = "fa-solid fa-archive"
     # FixIt 0.2.16 | NEW set menu item type, optional values: ["mobile", "desktop"]
     type = ""
+
+
 [[main]]
   identifier = "categories"
   parent = ""
@@ -32,10 +46,21 @@
   post = ""
   name = "Categories"
   url = "/categories/"
-  title = ""
-  weight = 2
+  title = "Posts Organised by Category"
+  weight = 3
   [main.params]
     icon = "fa-solid fa-folder-tree"
+
+[[main]]
+  identifier = "collections"
+  parent = ""
+  name = "Collections"
+  url = "collections/"
+  title = "Multipart Posts"
+  weight = 4
+  [main.params]
+    icon = "fa-solid fa-layer-group"
+
 [[main]]
   identifier = "tags"
   parent = ""
@@ -44,6 +69,33 @@
   name = "Tags"
   url = "/tags/"
   title = ""
-  weight = 3
+  weight = 5
   [main.params]
     icon = "fa-solid fa-tags"
+
+
+
+[[main]]
+  identifier = "About"
+  parent = ""
+  pre = ""
+  post = ""
+  name = "About"
+  url = "https://becos76.github.io"
+  title = "About Me"
+  weight = 6
+  [main.params]
+    icon = "fa-solid fa-signature"
+
+#[[main]]
+#  identifier = "About2"
+#  parent = ""
+#  pre = ""
+#  post = ""
+#  name = "About2"
+#  url = "/tags/"
+#  title = "About Me2"
+#  weight = 5
+#  [main.params]
+#    icon = "fa-solid fa-heart-circle-bolt text-danger fa-beat"
+#    #class = "fa-bounce"

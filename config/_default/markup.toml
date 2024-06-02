@@ -8,7 +8,7 @@
   ########## necessary configurations ##########
   # https://github.com/Lruihao/FixIt/issues/43
   codeFences = true
-  lineNos = true
+  lineNos = false
   lineNumbersInTable = true
   noClasses = false
   ########## necessary configurations ##########
