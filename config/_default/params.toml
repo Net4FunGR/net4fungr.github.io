@@ -539,7 +539,7 @@ disableThemeInject = false
     [page.comment.disqus]
       enable = true
       # Disqus shortname to use Disqus in posts
-      shortname = "becos76"
+      shortname = "manolis_kaliotis"
     # Gitalk comment config (https://github.com/gitalk/gitalk)
     [page.comment.gitalk]
       enable = false
