@@ -510,7 +510,7 @@ disableThemeInject = false
     Mix = false
   # FixIt 0.2.15 | CHANGED Comment config
   [page.comment]
-    enable = false
+    enable = true
     # FixIt 0.2.13 | NEW Artalk comment config (https://artalk.js.org/)
     [page.comment.artalk]
       enable = false
@@ -631,12 +631,12 @@ disableThemeInject = false
       katex = false
     # FixIt 0.2.14 | NEW Giscus comments config
     [page.comment.giscus]
-      enable = false
-      repo = ""
-      repoId = ""
-      category = ""
-      categoryId = ""
-      mapping = ""
+      enable = true
+      repo = "Net4FunGR/net4fungr.github.io"
+      repoId = "R_kgDOGLZFKQ"
+      category = "Blog Comments"
+      categoryId = "DIC_kwDOGLZFKc4Cf1aA"
+      mapping = "pathname"
       strict = "0" # FixIt NEW | 0.2.18
       term = ""
       reactionsEnabled = "1"
