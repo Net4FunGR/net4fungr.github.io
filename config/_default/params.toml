@@ -510,7 +510,7 @@ disableThemeInject = false
     Mix = false
   # FixIt 0.2.15 | CHANGED Comment config
   [page.comment]
-    enable = true
+    enable = false
     # FixIt 0.2.13 | NEW Artalk comment config (https://artalk.js.org/)
     [page.comment.artalk]
       enable = false
@@ -537,7 +537,7 @@ disableThemeInject = false
       versionCheck = true
     # Disqus comment config (https://disqus.com)
     [page.comment.disqus]
-      enable = true
+      enable = false
       # Disqus shortname to use Disqus in posts
       shortname = "net4fungr"
     # Gitalk comment config (https://github.com/gitalk/gitalk)
