@@ -1,7 +1,7 @@
 ---
 title: Cisco IOU, I'm still in love with you...
 subtitle: Using the lightweight Cisco IOL in your labs
-date: 2024-11-015T00:00:00Z
+date: 2024-11-05T00:00:00Z
 lastmod: 2024-11-05T00:00:00Z
 draft: true
 tags:
@@ -17,7 +17,7 @@ code:
   copy: true
   maxShownLines: 30
 author: false
-summary: "Showcase how to use Cisco IOL in your containerlabs using netlab to orchestrate the provisioning of the infra and Kentik for the traffic visibility and monitoring use cases."
+summary: Showcase how to use Cisco IOL in your containerlabs using netlab to orchestrate the provisioning of the infra and Kentik for the traffic visibility and monitoring use cases.
 ---
 ---
 ## Intro
