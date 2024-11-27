@@ -1,19 +1,22 @@
 ---
-title: "K~ustom Metrics in Kentik NMS"
-subtitle: "Feeding Kentik NMS with custom SNMP and ST metrics"
+title: K~ustom Metrics in Kentik NMS
+subtitle: Feeding Kentik NMS with custom SNMP and ST metrics
 date: 2024-05-04T00:00:00Z
 draft: false
-tags: [network monitoring,telemetry,snmp]
-categories: [network monitoring]
+tags:
+  - network
+  - monitoring
+  - telemetry
+  - snmp
+categories:
+  - network monitoring
 toc:
   enable: true
 code:
   copy: true
   maxShownLines: 40
-#featuredImage: "featured-image.png"
-#featuredImagePreview: false
 author: " "
-summary: "Showcasing the capabilities of Kentik NMS to define custom metrics and display them in the Portal. We are going to see how to configure Kentik's Universal agent to poll custom SNMP and ST metrics from devices and display them in Metrics Explorer in the Portal"
+summary: Showcasing the capabilities of Kentik NMS to define custom metrics and display them in the Portal. We are going to see how to configure Kentik's Universal agent to poll custom SNMP and ST metrics from devices and display them in Metrics Explorer in the Portal
 ---
 ---
 ## Intro

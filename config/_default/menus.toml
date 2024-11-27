@@ -26,7 +26,7 @@
   url = "/archives/"
   # title will be shown when you hover on this menu link
   title = "All My Posts"
-  weight = 2
+  weight = 3
   # FixIt 0.2.14 | NEW add user-defined content to menu items
   [main.params]
     # add css class to a specific menu item
@@ -47,7 +47,7 @@
   name = "Categories"
   url = "/categories/"
   title = "Posts Organised by Category"
-  weight = 3
+  weight = 1
   [main.params]
     icon = "fa-solid fa-folder-tree"
 
@@ -57,7 +57,7 @@
   name = "Collections"
   url = "collections/"
   title = "Multipart Posts"
-  weight = 4
+  weight = 2
   [main.params]
     icon = "fa-solid fa-layer-group"
 

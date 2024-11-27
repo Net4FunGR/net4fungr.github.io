@@ -17,7 +17,7 @@ fingerprint = ""
 # NEW date format
 dateFormat = "2006-01-02"
 # website images for Open Graph and Twitter Cards
-images = ["/images/pyrtr.png"]
+images = ["/images/pyrtr_small.png"]
 # FixIt 0.2.12 | NEW enable PWA
 enablePWA = false
 # FixIt 0.2.14 | NEW whether to add external Icon for external links automatically
@@ -41,7 +41,7 @@ disableThemeInject = false
   name = "becos76"
   email = "mkaliotis(at)gmail(dot)com"
   link = "https://github.com/becos76"
-  avatar = "/images/pyrtr.png"
+  avatar = "/images/pyrtr_small.png"
 
 # FixIt 0.3.0 | NEW public Git repository information only then enableGitInfo is true
 [gitInfo]
@@ -59,7 +59,7 @@ disableThemeInject = false
   # optional site title override for the app when added to an iOS home screen or Android launcher
   title = "Becos :: Back Blog"
   # whether to omit favicon resource links
-  noFavicon = false
+  noFavicon = true
   # modern SVG favicon to use in place of older style .png and .ico files
   svgFavicon = ""
   # Safari mask icon color
@@ -113,7 +113,7 @@ disableThemeInject = false
   # Header title config
   [header.title]
     # URL of the LOGO
-    logo = "/images/pyrtr.png"
+    logo = "/images/pyrtr_small.png"
     # title name
     name = "...ssh and blog..."
     # you can add extra information before the name (HTML format is supported), such as icons
@@ -223,7 +223,7 @@ disableThemeInject = false
     # Gravatar Email for preferred avatar in home page
     gravatarEmail = "xx@xx.com"
     # URL of avatar shown in home page
-    avatarURL = "/images/pyrtr.png"
+    avatarURL = "/images/pyrtr_small.png"
     # FixIt 0.2.17 | NEW identifier of avatar menu link
     avatarMenu = ""
     # title shown in home page (HTML format is supported)
@@ -485,13 +485,13 @@ disableThemeInject = false
   [page.share]
     enable = true
     Twitter = true
-    Facebook = true
-    Linkedin = false
+    Facebook = false
+    Linkedin = true
     Whatsapp = false
     Pinterest = false
     Tumblr = false
     HackerNews = false
-    Reddit = false
+    Reddit = true
     VK = false
     Buffer = false
     Xing = false
@@ -499,7 +499,7 @@ disableThemeInject = false
     Instapaper = false
     Pocket = false
     Flipboard = false
-    Weibo = true
+    Weibo = false
     Myspace = false
     Blogger = false
     Baidu = false
@@ -695,7 +695,7 @@ disableThemeInject = false
 [watermark]
   enable = false
   # watermark's text (HTML format is supported)
-  content = "<img src='/images/pyrtr.png'>"
+  content = "<img src='/images/pyrtr_small.png'>"
   # watermark's transparency
   opacity = 0.1
   # watermark's width. unit: px
@@ -714,10 +714,10 @@ disableThemeInject = false
   fontFamily = "inherit"
 
 # FixIt 0.2.12 | NEW Busuanzi count
-[ibruce]
-  enable = false
-  # Enable in post meta
-  enablePost = false
+#[ibruce]
+#  enable = false
+#  # Enable in post meta
+#  enablePost = false
 
 # Site verification code config for Google/Bing/Yandex/Pinterest/Baidu/360/Sogou
 [verification]

@@ -1,19 +1,20 @@
 ---
-title: "JumpStart Your Network Automation Journey"
-subtitle: "Yet Another Way to start your network automation journey!!!"
+title: JumpStart Your Network Automation Journey
+subtitle: Yet Another Way to start your network automation journey!!!
 date: 2023-01-01T15:36:24+03:00
 draft: true
-tags: [automation, use-cases]
-categories: [back-blog]
+tags:
+  - automation
+  - use-cases
+categories:
+  - back-blog
 toc:
   enable: false
 code:
   copy: true
   maxShownLines: -1
-#featuredImage: "featured-image.png"
-#featuredImagePreview: false
 author: " "
-summary: "Many of us are hesitant in starting· Many of us loose time between deciding if it's worth it or which path to take. I agree, it is difficult and the older your are the bigger the barriers you set to yourself, but as soon as you realize that this is the only way forward, you are already late! So, start small and don't stall anymore."
+summary: Many of us are hesitant in starting· Many of us loose time between deciding if it's worth it or which path to take. I agree, it is difficult and the older your are the bigger the barriers you set to yourself, but as soon as you realize that this is the only way forward, you are already late! So, start small and don't stall anymore.
 ---
 
 # Intro

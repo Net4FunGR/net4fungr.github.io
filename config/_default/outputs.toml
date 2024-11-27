@@ -9,7 +9,7 @@
 # section: ["HTML", "RSS"]
 # taxonomy: ["HTML", "RSS"]
 # term: ["HTML", "RSS"]
-home = ["HTML", "RSS", "JSON", "archives", "offline"]
+home = ["HTML", "RSS", "JSON", "archives", "offline", "search"]
 page = ["HTML", "MarkDown"]
 section = ["HTML", "RSS"]
 taxonomy = ["HTML"]
