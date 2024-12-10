@@ -5,7 +5,7 @@ date: 2022-06-06T00:00:00+03:00
 lastmod: 2022-06-09T00:00:00+03:00
 draft: false
 tags: [k8s, kne, netsim]
-categories: [k8s]
+categories: [Art of Labbing]
 collections: [Kube My Router Up!]
 toc:
   enable: true

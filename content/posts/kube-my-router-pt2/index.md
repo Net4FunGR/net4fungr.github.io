@@ -4,7 +4,7 @@ subtitle: "Setup a 3 node k8s cluster with kubeadm"
 date: 2022-05-31T12:40:24+03:00
 draft: false
 tags: [k8s, kubeadm, Ubuntu]
-categories: [k8s]
+categories: [Art of Labbing]
 collections: [Kube My Router Up!]
 toc:
   enable: true

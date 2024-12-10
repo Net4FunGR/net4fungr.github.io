@@ -4,7 +4,7 @@ subtitle: "Deploy cloud image in EVE-NG and prepare VMs"
 date: 2022-05-28T10:36:24+03:00
 draft: false
 tags: [EVE-NG, Ubuntu]
-categories: [k8s]
+categories: [Art of Labbing]
 collections: [Kube My Router Up!]
 toc:
   enable: true
